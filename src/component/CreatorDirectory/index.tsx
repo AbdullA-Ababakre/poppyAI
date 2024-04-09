@@ -1,13 +1,9 @@
-import React, { useState, useEffect, ChangeEventHandler } from "react";
-import { supabaseClient } from "@/utils/supabaseClient";
+import React from "react";
 import "./index.scss";
-import { CreatorDetail } from "@/types";
-import { Suspense } from "react";
 import Loading from "@/src/pages/loading";
 import dynamic from "next/dynamic";
-import { SearchFilters } from "../SearchFilters";
 import { useCreatorSearch } from "@/src/hooks/useCreatorSearch";
-const CreatorCard = dynamic(() => import("../CreatorCard"));
+import { divide } from "lodash";
 const SearchInput = dynamic(() => import("../SearchInput"));
 
 
@@ -16,9 +12,9 @@ function CreatorDirectory() {
     handleChange,
     searchTerm,
     handleSubmit,
-    handleFilterChange,
     transcript
   } = useCreatorSearch();
+  console.log("transcript11",transcript);
 
   return (
     <div className="creatorDirectoryPage">
@@ -29,7 +25,8 @@ function CreatorDirectory() {
           handleSubmit={handleSubmit}
         />
       </div>
-      <div>Transcript111:{transcript}</div>
+      {!transcript && <Loading></Loading>}
+      {transcript && <div>{transcript}</div>}
     </div>
   );
 }

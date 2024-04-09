@@ -1,0 +1,47 @@
+@import "../../../variable.scss";
+// Base button styles
+.demoButton {
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  width: 100%;
+  transition: background-color 0.3s; // Smooth transition for hover effect
+
+  // Modifier for primary button
+  &--primary {
+    background-color: lighten($color: $color-primary-blue, $amount: 5);
+
+    &:hover {
+      background-color: $color-primary-blue;
+    }
+  }
+
+  // Modifier for secondary button
+  &--secondary {
+    background-color: lighten(
+      $color: $color-secondary,
+      $amount: 5
+    ); // Adjust color
+
+    &:hover {
+      background-color: $color-secondary;
+    }
+  }
+
+  // Modifier for tertiary button
+  &--tertiary {
+    background-color: lighten(
+      $color: $color-tertiary,
+      $amount: 5
+    ); // Adjust color
+
+    &:hover {
+      background-color: $color-tertiary;
+    }
+  }
+}

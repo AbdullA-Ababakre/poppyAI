@@ -1,0 +1,68 @@
+@import "../../../variable.scss";
+
+.creatorJoinForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: $background-color;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: $font-stack;
+
+  h2 {
+    color: $color-primary-blue;
+    margin-bottom: 1rem;
+  }
+
+  label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    color: $text-color;
+    font-weight: 600;
+
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    input[type="file"],
+    select,
+    textarea {
+      padding: 10px;
+      margin-top: 0.5rem;
+      border: 1px solid $border-color;
+      border-radius: 4px;
+      font-family: inherit;
+
+      &:focus {
+        outline: none;
+        border-color: $color-primary-blue;
+      }
+    }
+
+    input[type="file"] {
+      padding: 0.5rem;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 8rem;
+    }
+
+    select {
+      padding: 10px;
+      background-color: white;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .creatorJoinForm {
+    padding: 10px;
+  }
+
+  .creatorJoinForm h2 {
+    font-size: 20px;
+  }
+}

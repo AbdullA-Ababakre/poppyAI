@@ -1,0 +1,56 @@
+@import "../../../variable.scss";
+
+.alert-banner {
+  position: fixed;
+  top: 20px; // Adjust as needed to position the banner on the viewport
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000; // Ensure it floats above other content
+
+  width: auto;
+  max-width: calc(100% - 40px);
+
+  position: fixed;
+
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-sizing: border-box;
+  animation: glow 3s infinite ease-in-out;
+
+  &.error {
+    background: $error-red;
+  }
+
+  &.success {
+    background: $color-primary-blue;
+  }
+
+  p {
+    color: #fff;
+    margin-right: 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .close-button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    &:hover {
+      color: $color-primary-blue;
+    }
+  }
+}

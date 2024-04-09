@@ -1,0 +1,25 @@
+@import "../../../variable.scss";
+
+.dropdownComp {
+  height: $form-field-height-m;
+  padding: 8px 12px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s; // Smooth transition for hover and focus
+
+  &:hover,
+  &:focus {
+    border-color: var(
+      $color-primary-blue,
+      #007bff
+    ); // Use CSS variable for primary color, with a fallback
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Subtle shadow for depth
+  }
+
+  // Remove the box-shadow on focus to maintain the minimalistic style if desired
+  &:focus {
+    box-shadow: none; // Comment this line if you prefer to keep the focus shadow
+  }
+}

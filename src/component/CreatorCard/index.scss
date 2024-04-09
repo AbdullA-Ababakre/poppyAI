@@ -1,0 +1,64 @@
+.profile-card {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  font-family: "Arial", sans-serif;
+  margin: 0 auto;
+  transition: 0.3s;
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  .profile--image-container {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    margin: 20px;
+
+    img {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      background-size: contain;
+      background-position: center;
+    }
+  }
+
+  .profile-info {
+    padding: 20px;
+
+    h2 {
+      margin: 0;
+      padding: 0;
+      font-size: 1.5em;
+      color: #333;
+    }
+
+    .info-item {
+      font-size: 0.9em;
+      color: #666;
+      margin-top: 10px;
+    }
+  }
+
+  .profile-meta {
+    display: flex;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    .meta-item {
+      font-size: 0.8em;
+      border: solid #979797;
+      border-radius: 10px;
+      padding: 1px 8px;
+    }
+  }
+
+  .profile--send-email {
+    margin-top: 2rem;
+  }
+}

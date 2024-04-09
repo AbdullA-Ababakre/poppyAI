@@ -1,0 +1,17 @@
+Name
+Email
+Website
+Avatar
+Twitter_link
+Instagram
+Tiktok
+Instagram_followers
+Tiktok_followers
+Location
+Language
+Gender
+Industry
+Description
+created_at
+id
+embeddings

@@ -1,0 +1,21 @@
+@import "../../../variable.scss";
+
+.search-input-container {
+  margin: 0 1rem;
+}
+
+.search-input {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  width: 100%;
+  height: $form-field-height-m;
+  max-width: 800px;
+
+  &:focus {
+    border-color: lighten($color: $color-primary-blue, $amount: 0);
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2); // Add a subtle shadow on focus
+  }
+}

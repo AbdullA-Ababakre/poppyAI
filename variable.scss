@@ -1,0 +1,71 @@
+$color-primary-blue: #484aeb;
+$color-secondary: #fca236;
+$color-tertiary: #02b875;
+$max-width01: 1300px;
+$background-color: #f7f7f7;
+$primary-color: #5b63f3;
+$text-color: #333;
+$border-color: #ddd;
+$error-red: #e04545;
+$font-stack: "Helvetica Neue", sans-serif;
+$form-field-height-m: 3.5rem;
+
+$breakpoints: (
+  "small": 480px,
+  "medium": 768px,
+  "large": 1024px,
+  "xlarge": 1200px,
+);
+
+@mixin media($name) {
+  $query: map-get($breakpoints, $name);
+
+  @if $query != null {
+    @media (min-width: $query) {
+      @content;
+    }
+  } @else {
+    @error "Invalid breakpoint: #{$name}. Please choose from: #{map-keys($breakpoints)}.";
+  }
+}
+
+@mixin media-mobile {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin media-small {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin media-medium2 {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+
+@mixin media-large {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin removeLinkStyle {
+  color: inherit;
+  text-decoration: none;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba($color-primary-blue, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba($color-primary-blue, 1);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba($color-primary-blue, 0.7);
+  }
+}

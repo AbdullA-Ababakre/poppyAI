@@ -1,0 +1,34 @@
+@import "../../../variable.scss";
+
+.creatorDirectoryPage {
+  max-width: $max-width01;
+  margin: 0 auto;
+  &Container {
+    max-width: $max-width01;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    min-height: 90vh;
+  }
+
+  &HeaderSearchContainer {
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include media(medium) {
+    &Container {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    &HeaderSearchContainer {
+      flex-direction: row;
+      & > div {
+        flex: 1;
+      }
+    }
+  }
+}

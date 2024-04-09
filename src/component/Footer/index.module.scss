@@ -1,0 +1,48 @@
+@import "../../../variable.scss";
+
+.footer {
+  position: relative;
+  min-height: 30vh;
+  color: white;
+  background-color: rgb(18, 23, 40);
+
+  &__text {
+    color: rgb(251, 251, 252);
+    font-size: 14px;
+  }
+
+  &Content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 80vw;
+    min-height: 20vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    column-gap: 20px;
+
+    .footerLink {
+      @include removeLinkStyle;
+      align-self: center;
+    }
+
+    @include media(medium) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include media(large) {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+
+  &Line {
+    height: 1px;
+    margin: 1rem 0;
+  }
+
+  &Signature {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+  }
+}
